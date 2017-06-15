@@ -12,8 +12,6 @@ title{
   text-transform: uppercase;
 }
 
-
-
 .header {
     text-align: center;
     text-transform: uppercase;
@@ -97,7 +95,6 @@ h2 {
 .dropdown-content a:nth-child(3){
   background-image: url('china_flag.png');
 }
-
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
