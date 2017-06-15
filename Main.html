@@ -4,9 +4,8 @@
   <!-- Head of the main webpage -->
   <head>
     <title>dehv team</title>
-
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet"  type="text/css" href="style.css">
     <script src="script.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -23,11 +22,12 @@
   <body>
     <!-- preload custom font -->
     <div style="font-family:'variane';"> </div>
+
     <div class="header">
       <h1>dehv</h1>
       <h2>team</h2>
 
-      <!-- hower dropdown language bar -->
+      <!-- hover dropdown language bar -->
       <div id="language" class="dropdown pull-right">
         <button class="dropbtn">Languages</button>
         <div class="dropdown-content">
@@ -45,7 +45,7 @@
           <ol class="carousel-indicators">
               <li data-target="#team-carousel" data-slide-to="0" class="active"></li>
               <li data-target="#team-carousel" data-slide-to="1"></li>
-              <li data-target="#team-carousel" data-slide-top="2"></li>
+              <li data-target="#team-carousel" data-slide-to="2"></li>
           </ol>
 
           <div class="carousel-inner">
@@ -86,11 +86,25 @@
                         car1_text_ctx.fillText(text, 50, 50);
                     </script>
                 </div>
-
               </div>
 
               <div class="item">
-                slide 2
+                <div id="professionalism">
+                </div>
+                <div class="carousel-caption">
+                    <canvas id="carousel-slide-2-text" width="600" height="150"></canvas>
+                    <script>
+                        var car2_text = document.getElementById("carousel-slide-2-text");
+                        var car2_text_ctx = car2_text.getContext("2d");
+                        var text = "Feel the bern";
+                        car2_text_ctx.font = "30pt Helvetica";
+                        car2_text_ctx.strokeStyle = "#fff";
+                        car2_text_ctx.lineWidth = 5;
+                        car2_text_ctx.strokeText(text, 50, 50);
+                        car2_text_ctx.fillStyle="#000";
+                        car2_text_ctx.fillText(text, 50, 50);
+                    </script>
+                </div>
               </div>
 
           </div>
@@ -109,9 +123,41 @@
     </div>
 
     <div class="main-content">
-      <div class="practice-ideas">
+      <!-- team introduction part--->
+      <div class="Introduction">
+        <!--
+        <div id="member1">
+        </div>
+
+        <div id="member2">
+        </div>
+
+        <div id="member3">
+        </div>
+
+        <div id="member4">
+        </div>
+        -->
+
+        <table class="introtable">
+          <tr>
+            <td></td>
+            <td><img class="profilepic" src="profile_image.png"></td>
+            <td><img class="profilepic" src="eric_chen.png"></td>
+            <td><img class="profilepic" src="profile_image.png"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><img class="profilepic" src="profile_image.png"></td>
+            <td></td>
+            <td><img class="profilepic" src="profile_image.png"></td>
+            <td></td>
+          </tr>
+        </table>
       </div>
     </div>
+
 
 
   </body>
