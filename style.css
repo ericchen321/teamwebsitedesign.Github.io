@@ -1,0 +1,158 @@
+*{
+
+}
+
+/* Note: font doesn't work on Chrome qq*/
+@font-face{
+  font-family: "variane";
+  src: url("variane_script.ttf");
+}
+
+title{
+  text-transform: uppercase;
+}
+
+
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    height: 55px !important;
+    position: relative;
+}
+
+.header:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header:hover{
+  color: white;
+  background: linear-gradient(gray, rgb(169, 169, 169));
+}
+
+h1,h2 {
+  display:inline;
+}
+
+h1 {
+  font-style: normal;;
+  font-size: 50px   !important;
+  text-shadow: 0.1px 0.1px #558ABB;
+}
+
+h2 {
+  font-size: 40px  !important;
+  color: lightblue !important;
+  text-shadow: 2px 2px #558ABB;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: white;
+    color: steelblue;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: absolute;
+    right: 80px;
+    height: 1em;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background: url('uk_flag.png') no-repeat 10px 10px;
+    background-size: 20px 20px;
+}
+
+.dropdown-content a:nth-child(2){
+  background-image: url('france_flag.png');
+}
+.dropdown-content a:nth-child(3){
+  background-image: url('china_flag.png');
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: black;
+    color: white;
+}
+
+.banner{
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  height: 500px;
+}
+
+#idea{
+  height: 500px;
+  background-image: url("idea_image.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  background-attachment: fixed;
+}
+
+#creativity{
+  height: 500px;
+  background-image: url("coding-in-the-classroom.png");
+  background-position: center;
+  background-size:cover;
+  margin: auto;
+  background-attachment: fixed;
+}
+
+.main-content{
+  background-color: white;
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  top: 555px;
+}
+
+.practice-ideas{
+  height: 1000px;
+  width: 40%;
+  position: absolute;
+  left: 0px;
+  margin: 0;
+  background-color: rgba(234, 244, 246, 1);
+}
