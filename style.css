@@ -163,14 +163,15 @@ h2 {
   position: absolute;
   top: 55px;
   width: 100%;
-  height: 500px;
+	height: 100vh;
 }
 .carousel-control.left, .carousel-control.right {
     background-image: none !important;
 }
 
 #idea, #creativity, #professionalism{
-    height: 500px;
+    /*height: 800px;*/
+		height: 100vh; /* cannot get this to be 100% the height of the screen :( */
     background-position: bottom;
     background-size: cover;
     margin: auto;
@@ -178,46 +179,112 @@ h2 {
 
 }
 #idea{
-  background-image: url("https://image.ibb.co/do6tf5/idea.jpg");
+  background-image: url("idea.png");
+	background-position: center;
 }
 
 #creativity{
-  background-image: url("https://image.ibb.co/e26gYQ/city_at_night.jpg");
+  background-image: url("city_at_night.jpg");
 }
 
 #professionalism{
-  background-image: url("https://image.ibb.co/cshc7k/blueprint.jpg");
+  background-image: url("blueprint.jpg");
 }
 
 .main-content{
-  background-color: white;
   width: 100%;
   height: 1000px;
   position: absolute;
-  top: 555px;
+	z-index: 0;
+	top: 850px;
+	background-image: url('background_intro.jpg');
 }
-
-/*
-#member1{
-	position: relative;
-	top: 20px;
-	left: 20px;
-	height: 200px;
-  width: 200px;
-  background: url("eric_chen.png") no-repeat center center;
-	background-size: 100% 100%;
-	border: solid blue 5px;
-  border-radius: 50%;
-}
-*/
 
 .introtable{
 	margin: auto;
 }
 
-.profilepic{
+.profilepic_member1{
+	height: 175px;
+	width: 175px;
+	background-size: cover;
 	margin: 40px;
-	width: 250px;
-	border: solid blue 5px;
-	border-radius: 50%;
+	border: solid lightblue 3px;
+	border-radius: 100%;
+	opacity: 0.4;
+}
+
+.profilepic_member1:hover{
+	opacity: 1;
+}
+
+
+.profilepic_member2{
+	height: 175px;
+	width: 175px;
+	background-size: cover;
+	margin: 40px;
+	border: solid lightblue 3px;
+	border-radius: 100%;
+	opacity: 0.4;
+}
+
+.profilepic_member2:hover {
+	opacity: 1;
+}
+
+
+.profilepic_member3{
+	height: 175px;
+	width: 175px;
+	background-size: cover;
+	margin: 40px;
+	border: solid lightblue 3px;
+	border-radius: 100%;
+	opacity: 0.4;
+}
+
+.profilepic_member3:hover{
+	opacity: 1;
+}
+
+
+.profilepic_member4{
+	height: 175px;
+	width: 175px;
+	background-size: cover;
+	margin: 40px;
+	border: solid lightblue 3px;
+	border-radius: 100%;
+	opacity: 0.4;
+}
+
+.profilepic_member4:hover {
+	opacity: 1;
+}
+
+.member1, .member2, .member3, .member4{
+	display: none;
+	text-align: center;
+	border: solid lightblue 2px;
+}
+#name{
+	font: 20pt Verdana;
+	padding: 3px;
+	color: darkblue;
+	border-bottom: solid lightblue 2px;
+}
+.member{
+	background-color: white;
+}
+#jobs{
+	padding: 5px 0 5px 0;
+}
+
+.profilepic_member1:hover ~ .member1, .profilepic_member2:hover ~ .member2,
+		.profilepic_member3:hover ~ .member3, .profilepic_member4:hover ~ .member4{
+	display: block;
+	position: absolute;
+	left: 300px;
+	right: 300px;
 }
