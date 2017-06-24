@@ -4,18 +4,33 @@
   <!-- Head of the main webpage -->
   <head>
     <title>dehv team</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="DEHV team intro page">
+    <meta name="keywords" content="DEHV, Daniel, Harry, Vanessa, Eric">
+    <meta name="author" content="DEHV Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="default-style.css">
+    <link rel="stylesheet" type="text/css" href="mobile-style.css">
+    <script src="script.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <!-- Body of the mainvwebpage -->
   <body>
+    <!-- preload custom font -->
+    <div style="font-family:'variane';"> </div>
 
     <div class="header">
       <h1>dehv</h1>
       <h2>team</h2>
 
-      <!-- hower dropdown language bar -->
-      <div class="dropdown">
+      <!-- hover dropdown language bar -->
+      <div id="language" class="dropdown pull-right">
         <button class="dropbtn">Languages</button>
         <div class="dropdown-content">
           <a href="#">English</a>
@@ -26,19 +41,228 @@
 
 
    </div>
-   <hr />
     <div class="banner">
-      <h3 id="meettheteam">Meet the Team</h3>
 
-      <div id="slogan">
-            <span id="slogan_text">
-            Inspirational quote here.
-          </span>
+      <div id = "team-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+          <ol class="carousel-indicators">
+              <li data-target="#team-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#team-carousel" data-slide-to="1"></li>
+              <li data-target="#team-carousel" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner">
+              <div class="item active">
+                  <div id="idea">
+                  </div>
+                  <div class="carousel-caption">
+                      <canvas id="carousel-slide-0-text" width="300" height="150"></canvas>
+                      <script>
+                          var car0_text = document.getElementById("carousel-slide-0-text");
+                          var car0_text_ctx = car0_text.getContext("2d");
+                          var text = "some text here";
+                          car0_text_ctx.font = "20pt Helvetica";
+                          car0_text_ctx.strokeStyle = "#fff";
+                          car0_text_ctx.lineWidth = 5;
+                          car0_text_ctx.strokeText(text, 50, 50);
+                          car0_text_ctx.fillStyle="#000";
+                          car0_text_ctx.fillText(text, 50, 50);
+                      </script>
+                  </div>
+
+              </div>
+
+              <div class="item">
+                <div id="creativity">
+                </div>
+                <div class="carousel-caption">
+                    <canvas id="carousel-slide-1-text" width="600" height="150"></canvas>
+                    <script>
+                        var car1_text = document.getElementById("carousel-slide-1-text");
+                        var car1_text_ctx = car1_text.getContext("2d");
+                        var text = "The quick brown fox jumped over the lazy dog.";
+                        car1_text_ctx.font = "30pt variane";
+                        car1_text_ctx.strokeStyle = "#fff";
+                        car1_text_ctx.lineWidth = 5;
+                        car1_text_ctx.strokeText(text, 50, 50);
+                        car1_text_ctx.fillStyle="#000";
+                        car1_text_ctx.fillText(text, 50, 50);
+                    </script>
+                </div>
+              </div>
+
+              <div class="item">
+                <div id="professionalism">
+                </div>
+                <div class="carousel-caption">
+                    <canvas id="carousel-slide-2-text" width="600" height="150"></canvas>
+                    <script>
+                        var car2_text = document.getElementById("carousel-slide-2-text");
+                        var car2_text_ctx = car2_text.getContext("2d");
+                        var text = "Feel the bern";
+                        car2_text_ctx.font = "30pt Helvetica";
+                        car2_text_ctx.strokeStyle = "#fff";
+                        car2_text_ctx.lineWidth = 5;
+                        car2_text_ctx.strokeText(text, 50, 50);
+                        car2_text_ctx.fillStyle="#000";
+                        car2_text_ctx.fillText(text, 50, 50);
+                    </script>
+                </div>
+              </div>
+
+          </div>
+
+
       </div>
+      <a class="left carousel-control" href="#team-carousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#team-carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
     </div>
 
-    <div class="navigation">
-    </div>
+    <div class="main-content">
 
+        <table class="introtable">
+          <tr>
+            <td id="row1-col1">
+              <div class="profilepic" id="profilepic_member1" style="background-image: url('daniel_tong.jpeg')">
+              </div>
+              <div class="member" id="member1">
+                <!--name-->
+                <div class="name">
+                  <p>Zitian (Daniel) Tong</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                  <p>Future Electrical Engineer and Web Developer.</p>
+                </div>
+                <!--description-->
+                <div class="description">
+                  <p>Hi! I am a hardware engineer, web developer, software developer and a dreamer. I am passionate about physics, math and programming. </p>
+                </div>
+              </div>
+            </td>
+            <td id="row1-col2">
+              <div class="profilepic" id="profilepic_member2" style="background-image: url('eric_chen.png')">
+              </div>
+              <div class="member" id="member2">
+                <!--name-->
+                <div class="name">
+                  <p>Guanxiong (Eric) Chen</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                <p>Future Electrical Engineer and Web Developer.</p>
+                </div>
+                <!--description-->
+                <div class="description">
+                  <p></p>
+                </div>
+              </div>
+            </td>
+            <td id="row1-col3">
+              <div class="profilepic" id="profilepic_member3" style="background-image: url('harry_liu.jpg'); background-size: 200%; background-position: center 25%;">
+              </div>
+              <div class="member" id="member3">
+                <!--name-->
+                <div class="name">
+                <p>Zhicheng (Harry) Liu</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                  <p>Future Civil Engineer and Web Designer.</p>
+                </div>
+                <!--description-->
+                <div class="description">
+                  <p></p>
+                </div>
+              </div>
+            </td>
+            <td id="row1-col4">
+              <div class="profilepic" id="profilepic_member4" style="background-image: url('vanessa_lin.jpg'); background-position: 15% 0;">
+              </div>
+              <div class="member" id="member4">
+                <!--name-->
+                <div class="name">
+                  <p>Vanessa Lin</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                  <p>Future Computer Engineer and Web Developer</p>
+                </div>
+                <!--description-->
+                <div class="description">
+                  <p>Cat disguised as a human.</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td id="row2-col1">
+              <div class="profilepic" id="profilepic_member2" style="background-image: url('eric_chen.png')">
+              </div>
+              <div class="member" id="member2">
+                <!--name-->
+                <div class="name">
+                  <p>Guanxiong (Eric) Chen</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                <p>Future Electrical Engineer and Web Developer.</p>
+                </div>
+                <!--description-->
+                <div class="description">
+                  <p></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td id="row3-col1">
+              <div class="profilepic" id="profilepic_member3" style="background-image: url('harry_liu.jpg'); background-size: 200%; background-position: center 25%;">
+              </div>
+              <div class="member" id="member3">
+                <!--name-->
+                <div class="name">
+                <p>Zhicheng (Harry) Liu</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                  <p>Future Civil Engineer and Web Designer.</p>
+                </div>
+                <!--description-->
+                <div class="description">
+                  <p></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td id="row4-col1">
+              <div class="profilepic" id="profilepic_member4" style="background-image: url('vanessa_lin.jpg'); background-position: 15% 0;">
+              </div>
+              <div class="member" id="member4">
+                <!--name-->
+                <div class="name">
+                  <p>Vanessa Lin</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                  <p>Future Computer Engineer and Web Developer</p>
+                </div>
+                <!--description-->
+                <div class="description">
+                  <p>Cat disguised as a human.</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+    </div>
   </body>
 </html>
