@@ -1,0 +1,150 @@
+<!-- This is the main web page -->
+<!DOCTYPE html>
+<html>
+  <!-- Head of the main webpage -->
+  <head>
+    <title>DEHV Team</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Welcome to DEHV. We are a Vancouver based front-end development team. You can find more information regarding each member of the team: Zitian, Vanessa, Zhicheng, Guanxiong.">
+    <meta name="keywords" content="DEHV, Zitian, Zhicheng, Vanessa, Guanxiong">
+    <meta name="author" content="DEHV Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="default-style.css">
+    <link rel="stylesheet" type="text/css" href="mobile-style.css">
+    <script src="script.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <!-- Body of the mainvwebpage -->
+  <body>
+    <!-- preload custom font -->
+    <div style="font-family:'variane';"> </div>
+
+    <div class="header">
+      <h1>dehv</h1>
+      <div id="team-logo-container">
+        <img id="team-logo" src="future.jpg">
+      </div>
+      <!-- hover dropdown language bar -->
+      <div id="language" class="dropdown pull-right">
+        <button class="dropbtn">Languages</button>
+        <div class="dropdown-content">
+          <a href="#">English</a>
+          <a href="#">Français</a>
+          <a href="#">中文（简体）</a>
+        </div>
+      </div>
+   </div>
+
+   <div class="carousel-container">
+      <div id = "team-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+          <ol class="carousel-indicators">
+              <li data-target="#team-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#team-carousel" data-slide-to="1"></li>
+              <li data-target="#team-carousel" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner">
+              <div class="item">
+                  <div id="idea">
+                  </div>
+                  <div id="carousel-caption-1" class="carousel-caption">
+                      <h2>A Group of Engineers</h2>
+                      <h2>Devoting</h2>
+                      <h2>All Their Passion to Bring</h2>
+                      <h2>Your Ideas to Reality</h2>
+                  </div>
+              </div>
+
+              <div class="item active">
+                <div id="creativity">
+                </div>
+                <div id="carousel-caption-2" class="carousel-caption">
+                  <h2>HERE</h2>
+                  <br/>
+                  <h2>We Have the Most Talented People</h2>
+                  <h2>To Help You Achieve Your Dreams</h2>
+                </div>
+              </div>
+
+              <div class="item">
+                <div id="professionalism">
+                </div>
+                <div id="carousel-caption-3" class="carousel-caption">
+                    <h2>A Highly Motivated Team</h2>
+                </div>
+              </div>
+
+          </div>
+      </div>
+
+      <a class="left carousel-control" href="#team-carousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#team-carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="banner">
+      <h2>Here We Are.</h2>
+    </div>
+
+    <div class="main-content">
+      <div class="intro-container" id="member-1-container">
+        <img id="member-1-profile-pic" src="daniel_tong.jpeg">
+        <h2>Zitian (Daniel) Tong</h2>
+        <h3>Future Electrical Engineer and Web Developer</h3>
+        <p> “Geek”, is the only phrase can describe my obsession in doing hardware investigation, web and software developing. Plus, I am passionate about physics, math and programming.</p>
+      </div>
+
+      <div class="intro-container" id="member-2-container">
+        <img id="member-2-profile-pic" src="eric_chen.png">
+        <h2>Guanxiong (Eric) Chen</h2>
+        <h3>Future Electrical Engineer and Web Developer</h3>
+        <p>I'm interested in front-end development and robotics.</p>
+      </div>
+
+      <div class="intro-container" id="member-3-container">
+        <img id="member-3-profile-pic" src="harry_liu.png">
+        <h2>Zhicheng (Harry) Liu</h2>
+        <h3>Future Civil Engineer and Web Developer</h3>
+        <p>I am passionate about bringing innovation to the industry. By developing software for the industry, I believe that tremendous benefits will be brought to civil engineers and increase their working efficiencies. At the meantime, I am also obsessed in designing cool webpage.</p>
+      </div>
+
+      <div class="intro-container" id="member-4-container">
+        <img id="member-4-profile-pic" src="vanessa_lin.jpg">
+        <h2>Vanessa Lin</h2>
+        <h3>Future Computer Engineer and Web Developer</h3>
+        <p>I'm a computer engineering student who's interested in hardware and systems programming. Actually a cat disguised as a human.</p>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div id="contact-info">
+        <p>The DEHV Team</p>
+        <p>2205 Lower Mall, Vancouver, BC</p>
+        <p>dehvgroup@dehv.ca</p>
+        <p>Tel 778 683 8711</p>
+      </div>
+        <table id="contact-table">
+          <tr>
+            <td id="linkedin-cell">
+              <a href="https://www.linkedin.com"><img src="linkedin_icon.png"></a>
+            </td>
+            <td id="github-cell">
+              <a href="https://www.github.com"><img src="github_icon.png"></a>
+            </td>
+          </tr>
+        </table>
+    </div>
+  </body>
+</html>

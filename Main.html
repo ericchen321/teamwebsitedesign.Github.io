@@ -5,19 +5,19 @@
   <head>
     <title>dehv team</title>
     <meta charset="UTF-8">
+    <meta name="description" content="DEHV team intro page">
+    <meta name="keywords" content="DEHV, Daniel, Harry, Vanessa, Eric">
+    <meta name="author" content="DEHV Team">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet"  type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="default-style.css">
+    <link rel="stylesheet" type="text/css" href="mobile-style.css">
     <script src="script.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   </head>
 
   <!-- Body of the mainvwebpage -->
@@ -25,10 +25,11 @@
     <!-- preload custom font -->
     <div style="font-family:'variane';"> </div>
 
-    <div class="header">
+    <nav class="header">
       <h1>dehv</h1>
-      <h2>team</h2>
-
+      <div id="team-logo-container">
+        <img id="team-logo" src="future.jpg">
+      </div>
       <!-- hover dropdown language bar -->
       <div id="language" class="dropdown pull-right">
         <button class="dropbtn">Languages</button>
@@ -38,11 +39,28 @@
           <a href="#">中文（简体）</a>
         </div>
       </div>
+   </nav>
+   <script>
+   $(window).scroll(function() {
+     if ($(document).scrollTop() > 50) {
+       $('nav').addClass('shrink');
+     } else {
+       $('nav').removeClass('shrink');
+     }
+   });
+   </script>
+   <style>
+   .header{
+     height: 100px !important;
+   }
+   .shrink{
+      height: 55px !important;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+   }
+   </style>
 
-
-   </div>
-    <div class="banner">
-
+   <div class="carousel-container">
       <div id = "team-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
           <ol class="carousel-indicators">
               <li data-target="#team-carousel" data-slide-to="0" class="active"></li>
@@ -55,20 +73,9 @@
                   <div id="idea">
                   </div>
                   <div class="carousel-caption">
-                      <canvas id="carousel-slide-0-text" width="300" height="150"></canvas>
-                      <script>
-                          var car0_text = document.getElementById("carousel-slide-0-text");
-                          var car0_text_ctx = car0_text.getContext("2d");
-                          var text = "some text here";
-                          car0_text_ctx.font = "20pt Helvetica";
-                          car0_text_ctx.strokeStyle = "#fff";
-                          car0_text_ctx.lineWidth = 5;
-                          car0_text_ctx.strokeText(text, 50, 50);
-                          car0_text_ctx.fillStyle="#000";
-                          car0_text_ctx.fillText(text, 50, 50);
-                      </script>
+                      <h2>A Group of Engineers</h2>
+                      <h2>devote</h2>
                   </div>
-
               </div>
 
               <div class="item">
@@ -110,9 +117,8 @@
               </div>
 
           </div>
-
-
       </div>
+
       <a class="left carousel-control" href="#team-carousel" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
         <span class="sr-only">Previous</span>
@@ -121,81 +127,142 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
         <span class="sr-only">Next</span>
       </a>
+    </div>
 
+    <div class="banner">
     </div>
 
     <div class="main-content">
-
-        <table class="introtable">
+        <table id="introtable">
           <tr>
-            <td>
-              <div class="profilepic_member1" style="background-image: url('daniel_tong.jpeg')">
+            <td id="row1-col1">
+              <div class="profilepic" id="profilepic_member1" style="background-image: url('daniel_tong.jpeg')">
               </div>
-              <div class="member1 member">
+              <div class="member" id="member1">
                 <!--name-->
-                <div id="name">
-                  <p>Zitian(Daniel) Tong</p>
+                <div class="name">
+                  <p>Zitian (Daniel) Tong</p>
                 </div>
                 <!--team rule-->
-                <div id="jobs">
-                  <p>Future Electrical Engineer and Web Developer</p>
+                <div class="jobs">
+                  <p>Future Electrical Engineer and Web Developer.</p>
                 </div>
                 <!--description-->
-                <div id="description">
+                <div class="description">
                   <p>Hi! I am a hardware engineer, web developer, software developer and a dreamer. I am passionate about physics, math and programming. </p>
                 </div>
               </div>
             </td>
-            <td>
-              <div class="profilepic_member2" style="background-image: url('eric_chen.png')">
+            <td id="row1-col2">
+              <div class="profilepic" id="profilepic_member2" style="background-image: url('eric_chen.png')">
               </div>
-              <div class="member2 member">
+              <div class="member" id="member2">
                 <!--name-->
-                <div id="name">
-                  <p>Guanxiong(Eric) Chen</p>
+                <div class="name">
+                  <p>Guanxiong (Eric) Chen</p>
                 </div>
                 <!--team rule-->
-                <div id="jobs">
-                <p>Future Electrical Engineer and Web Developer</p>
+                <div class="jobs">
+                <p>Future Electrical Engineer and Web Developer.</p>
                 </div>
                 <!--description-->
-                <div id="description">
+                <div class="description">
                   <p></p>
                 </div>
               </div>
             </td>
-            <td>
-              <div class="profilepic_member3" style="background-image: url('harry_liu.jpg'); background-size: 200%; background-position: center 25%;">
+            <td id="row1-col3">
+              <div class="profilepic" id="profilepic_member3" style="background-image: url('harry_liu.jpg'); background-size: 200%; background-position: center 25%;">
               </div>
-              <div class="member3 member">
+              <div class="member" id="member3">
                 <!--name-->
-                <div id="name">
-                <p>Zhicheng(Harry) Liu</p>
+                <div class="name">
+                <p>Zhicheng (Harry) Liu</p>
                 </div>
                 <!--team rule-->
-                <div id="jobs">
-                  <p>Future Civil Engineer and Web Designer</p>
+                <div class="jobs">
+                  <p>Future Civil Engineer and Web Designer.</p>
                 </div>
                 <!--description-->
-                <div id="description">
+                <div class="description">
                   <p></p>
                 </div>
               </div>
             </td>
-            <td>
-              <div class="profilepic_member4" style="background-image: url('vanessa_lin.jpg'); background-position: 15% 0;">
+            <td id="row1-col4">
+              <div class="profilepic" id="profilepic_member4" style="background-image: url('vanessa_lin.jpg'); background-position: 15% 0;">
               </div>
-              <div class="member4 member">
+              <div class="member" id="member4">
                 <!--name-->
-                <div id="name">
+                <div class="name">
                   <p>Vanessa Lin</p>
                 </div>
                 <!--team rule-->
-                <div id="jobs">
+                <div class="jobs">
                   <p>Future Computer Engineer and Web Developer</p>
                 </div>
                 <!--description-->
-                <div id="description">
+                <div class="description">
+                  <p>Cat disguised as a human.</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td id="row2-col1">
+              <div class="profilepic" id="profilepic_member2" style="background-image: url('eric_chen.png')">
+              </div>
+              <div class="member" id="member2">
+                <!--name-->
+                <div class="name">
+                  <p>Guanxiong (Eric) Chen</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                <p>Future Electrical Engineer and Web Developer.</p>
+                </div>
+                <!--description-->
+                <div class="description">
+                  <p></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td id="row3-col1">
+              <div class="profilepic" id="profilepic_member3" style="background-image: url('harry_liu.jpg'); background-size: 200%; background-position: center 25%;">
+              </div>
+              <div class="member" id="member3">
+                <!--name-->
+                <div class="name">
+                <p>Zhicheng (Harry) Liu</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                  <p>Future Civil Engineer and Web Designer.</p>
+                </div>
+                <!--description-->
+                <div class="description">
+                  <p></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td id="row4-col1">
+              <div class="profilepic" id="profilepic_member4" style="background-image: url('vanessa_lin.jpg'); background-position: 15% 0;">
+              </div>
+              <div class="member" id="member4">
+                <!--name-->
+                <div class="name">
+                  <p>Vanessa Lin</p>
+                </div>
+                <!--team rule-->
+                <div class="jobs">
+                  <p>Future Computer Engineer and Web Developer</p>
+                </div>
+                <!--description-->
+                <div class="description">
                   <p>Cat disguised as a human.</p>
                 </div>
               </div>
@@ -203,6 +270,25 @@
           </tr>
         </table>
 
+    </div>
+
+    <div class="footer">
+      <div id="contact-info">
+        <p>The DEHV Team</p>
+        <p>2205 Lower Mall, Vancouver, BC</p>
+        <p>DEHV@whatever.com</p>
+        <p>Tel 123 456 7890</p>
+      </div>
+        <table id="contact-table">
+          <tr>
+            <td id="linkedin-cell">
+              <a href="https://www.linkedin.com"><img src="linkedin_icon.png"></a>
+            </td>
+            <td id="github-cell">
+              <a href="https://www.github.com"><img src="github_icon.png"></a>
+            </td>
+          </tr>
+        </table>
     </div>
   </body>
 </html>

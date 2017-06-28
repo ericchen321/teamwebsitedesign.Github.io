@@ -1,0 +1,350 @@
+/*stylesheet for desktop computers and laptops*/
+@media screen and (min-width: 500px) {
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		font-family: sans-serif;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	/* Note: font doesn't work on Chrome qq*/
+	@font-face{
+	  font-family: "variane";
+	  src: url("variane_script.ttf");
+	}
+
+	.header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 55px !important;
+			z-index: 9999;
+	    text-align: center;
+	    text-transform: uppercase;
+
+	}
+
+	.header:before{
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  background: white;
+	  width: 100%;
+	  height: 100%;
+	  z-index: -1;
+	}
+
+	.header:hover{
+	}
+
+	h1,h2 {
+		margin: 0 !important;
+		padding: 0 !important;
+	  display:inline-block;
+	}
+
+	h1 {
+	  position: absolute;
+		top: 13px;
+		left: 35px;
+		font-family: Avenir !important;
+	  font-style: normal;
+	  font-size: 33px   !important;
+	  text-shadow: 0.1px 0.1px #558ABB;
+	}
+
+	#team-logo-container {
+	  position: absolute;
+		top: 13px;
+	  left: 131px;
+		width: 145px;
+		height: auto;
+	}
+
+	#team-logo{
+		width: 100%;
+		height: auto;
+	}
+
+	/*  Dropdown Button */
+	.dropbtn {
+	    background-color: white;
+	    color: black;
+	    padding: 16px;
+	    font-size: 16px;
+	    border: none;
+	    cursor: pointer;
+	}
+
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+	    position: absolute;
+	    right: 80px;
+	    height: 1em;
+	    display: inline-block;
+	}
+
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	    background: url('uk_flag.png') no-repeat 10px 10px;
+	    background-size: 20px 20px;
+	}
+
+	.dropdown-content a:nth-child(2){
+	  background-image: url('france_flag.png');
+	}
+	.dropdown-content a:nth-child(3){
+	  background-image: url('china_flag.png');
+	}
+
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {
+	  background-color: #f1f1f1;
+	}
+
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+
+	/* Change the background color of the dropdown button when the dropdown content is shown */
+	.dropdown:hover .dropbtn {
+	    background-color: #f9f9f9;
+	    color: black;
+	}
+
+	.carousel-container{
+	  position: absolute;
+	  top: 55px;
+	  width: 100%;
+		height: 480px;
+	}
+
+	.carousel-control.left, .carousel-control.right {
+	    background-image: none !important;
+	}
+
+	.carousel-caption h2{
+		display: block;
+		line-height: 150%;
+	}
+
+	#carousel-caption-1{
+		width: 50%;
+		position: absolute !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		top: 55px !important;
+		left: 5px !important;
+	}
+
+	#carousel-caption-1 h2{
+		width: 100%;
+		margin-top: 4px !important;
+		margin-bottom: 4px !important;
+		text-align: center;
+		color: black !important;
+		font-family: Calibri;
+		font-style: italic;
+	}
+
+	#carousel-caption-2{
+		position: absolute;
+		top: 120px;
+	}
+
+	#carousel-caption-2 h2{
+		font-family: "Arial Rounded MT Bold";
+	}
+
+	#carousel-caption-3{
+		position: absolute;
+		top: 190px;
+	}
+
+	#carousel-caption-3 h2{
+		color: black !important;
+		font-style: italic;
+	}
+
+	#idea, #creativity, #professionalism{
+	    /*height: 800px;*/
+			height: 480px; /* cannot get this to be 100% the height of the screen :( */
+	    background-position: bottom;
+	    background-size: cover;
+	    margin: auto;
+	    background-attachment: fixed;
+	}
+
+	#idea{
+	  background-image: url("shake-hands.jpg");
+		filter: blur(5px) grayscale(70%);
+	}
+
+	#creativity{
+	  background-image: url("black-background.jpg");
+	}
+
+	#professionalism{
+	  background-image: url("blueprint.jpg");
+		filter: blur(5px) grayscale(70%);
+	}
+
+	.banner{
+		position: absolute;
+		top: 535px;
+		width: 100%;
+		height: 200px;
+	}
+
+	.banner h2{
+		position: relative;
+		top: 80px;
+		text-align: center;
+		width: 100%;
+		font-weight: bold;
+	}
+
+	.main-content{
+	  width: 100%;
+	  height: 1400px;
+	  position: absolute;
+		z-index: 0;
+		top: 735px;
+		background-image: url('white-background.png');
+		background-repeat: none;
+		background-size: cover;
+	}
+
+	.intro-container{
+		width: 70%;
+		height: auto;
+		overflow: hidden;
+		margin: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.intro-container img{
+		width: 180px;
+		height: 180px;
+		float: left;
+		margin: 3rem;
+		border: solid gray;
+		border-radius: 70%;
+		background-size: cover;
+	}
+
+	#member-2-profile-pic, #member-4-profile-pic{
+		float: right;
+	}
+
+	.intro-container h2{
+		margin-top: 1rem !important;
+		margin-bottom: 1rem !important;
+		position: relative;
+		top: 30px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.intro-container h3{
+		position: relative;
+		top: 15px;
+		font-size: 11pt;
+		font-family: monospace;
+		font-weight: bold;
+	}
+
+	.intro-container p{
+		position: relative;
+		top: 20px;
+		line-height: 200%;
+		font-size: 1.2em;
+	}
+
+	.footer{
+		border-top: solid black 5px;
+		position: relative;
+		top: 1935px;
+		width: 100%;
+		height: 245px;
+		background-color: white;
+	}
+
+	.footer p{
+		color: black;
+		font-size: 13pt;
+		text-align: center;
+	}
+
+	#contact-info{
+		position: relative;
+		top: 20px;
+	}
+
+	#contact-table{
+		margin: auto;
+	}
+
+	#contact-table img{
+		width: 40px;
+		height: auto;
+		background-color: white;
+		margin: 30px 20px;
+		border: solid 3px black;
+	}
+}

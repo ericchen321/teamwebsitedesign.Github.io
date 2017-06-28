@@ -1,0 +1,246 @@
+/*stylesheet for smart phones*/
+@media screen and (max-width: 499px){
+  * {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		font-family: sans-serif;
+	}
+  /* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	/* Note: font doesn't work on Chrome qq*/
+	@font-face{
+	  font-family: "variane";
+	  src: url("variane_script.ttf");
+	}
+
+	.header {
+	  text-align: center;
+	  text-transform: uppercase;
+	  height: 55px !important;
+	  position: relative;
+	}
+
+	.header:before{
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  background: white;
+	  width: 100%;
+	  height: 100%;
+	  z-index: -1;
+	}
+
+	.header:hover{
+	}
+
+	h1,h2 {
+	  display:inline;
+	}
+
+	h1 {
+	  position: relative;
+	  left: 50px;
+	  font-style: normal;;
+	  font-size: 50px   !important;
+	  text-shadow: 0.1px 0.1px #558ABB;
+	  position: relave;
+	}
+
+	h2 {
+	  position: relative;
+	  left: 60px;
+	  font-size: 40px  !important;
+	  color: lightblue !important;
+	  text-shadow: 2px 2px #558ABB;
+	}
+
+	/* Dropdown Button */
+	.dropbtn {
+	  background-color: white;
+	  color: black;
+	  padding: 16px;
+	  font-size: 16px;
+	  border: none;
+	  cursor: pointer;
+	}
+
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+	    display: block;
+	}
+
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	    background: url('uk_flag.png') no-repeat 10px 10px;
+	    background-size: 20px 20px;
+	}
+
+	.dropdown-content a:nth-child(2){
+	  background-image: url('france_flag.png');
+	}
+	.dropdown-content a:nth-child(3){
+	  background-image: url('china_flag.png');
+	}
+
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {
+	  background-color: #f1f1f1;
+	}
+
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+
+	/* Change the background color of the dropdown button when the dropdown content is shown */
+	.dropdown:hover .dropbtn {
+	    background-color: #f9f9f9;
+	    color: black;
+	}
+
+	#language button {
+	  background-color: #B0E2FF;
+	}
+
+	.banner{
+	  position: absolute;
+	  top: 55px;
+	  width: 100%;
+		height: 60vh;
+	}
+	.carousel-control.left, .carousel-control.right {
+	    background-image: none !important;
+	}
+
+	#idea, #creativity, #professionalism{
+	    /*height: 800px;*/
+			height: 60vh; /* cannot get this to be 100% the height of the screen :( */
+	    background-position: bottom;
+	    background-size: cover;
+	    margin: auto;
+	    background-attachment: fixed;
+
+	}
+	#idea{
+	  background-image: url("idea.png");
+		background-position: center;
+	}
+
+	#creativity{
+	  background-image: url("city_at_night.jpg");
+	}
+
+	#professionalism{
+	  background-image: url("blueprint.jpg");
+	}
+
+	.main-content{
+	  width: 100%;
+	  height: 400vh;
+	  position: absolute;
+		z-index: 0;
+		top: 68vh;
+		background-image: url('background_intro.jpg');
+	}
+
+	.introtable{
+		margin: auto;
+    overflow-y: scroll;
+	}
+
+	.profilepic {
+		height: 175px;
+		width: 175px;
+		background-size: cover;
+		margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+		border: solid lightblue 3px;
+		border-radius: 100%;
+		opacity: 0.4;
+	}
+
+	.profilepic:hover {
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+		opacity: 1;
+	}
+
+	.profilepic:hover ~ .member{
+		display: block;
+    margin: auto;
+	}
+
+	.member {
+		display: none;
+		text-align: center;
+		border: solid lightblue 2px;
+		color: white;
+		background-color: black;
+	}
+
+  #row1-col2, #row1-col3, #row1-col4{
+    display: none;
+  }
+
+	.name {
+		font: 28pt Verdana;
+		padding: 3px;
+		color: lightblue;
+		font-weight: bold;
+		border-bottom: solid lightblue 2px;
+	}
+
+	.jobs {
+		font: 20pt Verdana;
+		line-height: 150%;
+		padding: 5px 0 5px 0;
+	}
+
+	.description {
+		font: 20pt Verdana;
+		line-height: 150%;
+	}
+}

@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -171,7 +172,7 @@ h2 {
 
 #idea, #creativity, #professionalism{
     /*height: 800px;*/
-		height: 100vh; /* cannot get this to be 100% the height of the screen :( */
+		height: 800px; /* cannot get this to be 100% the height of the screen :( */
     background-position: bottom;
     background-size: cover;
     margin: auto;
@@ -204,7 +205,7 @@ h2 {
 	margin: auto;
 }
 
-.profilepic_member1{
+.profilepic {
 	height: 175px;
 	width: 175px;
 	background-size: cover;
@@ -214,77 +215,40 @@ h2 {
 	opacity: 0.4;
 }
 
-.profilepic_member1:hover{
+.profilepic:hover {
 	opacity: 1;
 }
 
-
-.profilepic_member2{
-	height: 175px;
-	width: 175px;
-	background-size: cover;
-	margin: 40px;
-	border: solid lightblue 3px;
-	border-radius: 100%;
-	opacity: 0.4;
-}
-
-.profilepic_member2:hover {
-	opacity: 1;
-}
-
-
-.profilepic_member3{
-	height: 175px;
-	width: 175px;
-	background-size: cover;
-	margin: 40px;
-	border: solid lightblue 3px;
-	border-radius: 100%;
-	opacity: 0.4;
-}
-
-.profilepic_member3:hover{
-	opacity: 1;
-}
-
-
-.profilepic_member4{
-	height: 175px;
-	width: 175px;
-	background-size: cover;
-	margin: 40px;
-	border: solid lightblue 3px;
-	border-radius: 100%;
-	opacity: 0.4;
-}
-
-.profilepic_member4:hover {
-	opacity: 1;
-}
-
-.member1, .member2, .member3, .member4{
-	display: none;
-	text-align: center;
-	border: solid lightblue 2px;
-}
-#name{
-	font: 20pt Verdana;
-	padding: 3px;
-	color: darkblue;
-	border-bottom: solid lightblue 2px;
-}
-.member{
-	background-color: white;
-}
-#jobs{
-	padding: 5px 0 5px 0;
-}
-
-.profilepic_member1:hover ~ .member1, .profilepic_member2:hover ~ .member2,
-		.profilepic_member3:hover ~ .member3, .profilepic_member4:hover ~ .member4{
+.profilepic:hover ~ .member{
 	display: block;
 	position: absolute;
 	left: 300px;
 	right: 300px;
+}
+
+.member {
+	display: none;
+	text-align: center;
+	border: solid lightblue 2px;
+	color: white;
+	background-color: black;
+}
+
+.name {
+	font: 28pt Verdana;
+	padding: 3px;
+	color: lightblue;
+	font-weight: bold;
+	border-bottom: solid lightblue 2px;
+}
+
+.jobs {
+	font: 20pt Verdana;
+	line-height: 150%;
+	padding: 5px 0 5px 0;
+}
+
+.description{
+	font: 20pt Verdana;
+	line-height: 150%;
 }
