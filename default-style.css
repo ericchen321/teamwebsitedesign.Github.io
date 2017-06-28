@@ -52,10 +52,14 @@
 	}
 
 	.header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 55px !important;
+			z-index: 9999;
 	    text-align: center;
 	    text-transform: uppercase;
-	    height: 55px !important;
-	    position: relative;
+
 	}
 
 	.header:before{
@@ -73,30 +77,38 @@
 	}
 
 	h1,h2 {
-	  display:inline;
+		margin: 0 !important;
+		padding: 0 !important;
+	  display:inline-block;
 	}
 
 	h1 {
-	  position: relative;
-	  left: 30px;
-	  font-style: normal;;
-	  font-size: 50px   !important;
+	  position: absolute;
+		top: 13px;
+		left: 35px;
+		font-family: Avenir !important;
+	  font-style: normal;
+	  font-size: 33px   !important;
 	  text-shadow: 0.1px 0.1px #558ABB;
-	  position: relave;
 	}
 
-	h2 {
-	  position: relative;
-	  left: 40px;
-	  font-size: 40px  !important;
-	  color: lightblue !important;
-	  text-shadow: 2px 2px #558ABB;
+	#team-logo-container {
+	  position: absolute;
+		top: 13px;
+	  left: 131px;
+		width: 145px;
+		height: auto;
 	}
 
-	/* Dropdown Button */
+	#team-logo{
+		width: 100%;
+		height: auto;
+	}
+
+	/*  Dropdown Button */
 	.dropbtn {
 	    background-color: white;
-	    color: steelblue;
+	    color: black;
 	    padding: 16px;
 	    font-size: 16px;
 	    border: none;
@@ -150,44 +162,76 @@
 
 	/* Change the background color of the dropdown button when the dropdown content is shown */
 	.dropdown:hover .dropbtn {
-	    background-color: black;
-	    color: white;
+	    background-color: #f9f9f9;
+	    color: black;
 	}
 
-	#language button {
-	  background-color: #B0E2FF;
-	}
-
-	.banner{
+	.carousel-container{
 	  position: absolute;
 	  top: 55px;
 	  width: 100%;
-		height: 100vh;
+		height: 480px;
 	}
+
 	.carousel-control.left, .carousel-control.right {
 	    background-image: none !important;
 	}
 
+	#carousel-caption-1{
+		width: 50%;
+		position: absolute !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		top: 55px !important;
+		left: 5px !important;
+	}
+
+	#carousel-caption-1 h2{
+		width: 100%;
+		margin-top: 4px !important;
+		margin-bottom: 4px !important;
+		text-align: center;
+		color: black !important;
+		font-family: Calibri;
+		font-style: italic;
+	}
+
 	#idea, #creativity, #professionalism{
 	    /*height: 800px;*/
-			height: 800px; /* cannot get this to be 100% the height of the screen :( */
+			height: 480px; /* cannot get this to be 100% the height of the screen :( */
 	    background-position: bottom;
 	    background-size: cover;
 	    margin: auto;
 	    background-attachment: fixed;
-
 	}
+
 	#idea{
-	  background-image: url("idea.png");
-		background-position: center;
+	  background-image: url("shake-hands.jpg");
+		filter: blur(5px) grayscale(70%);
 	}
 
 	#creativity{
-	  background-image: url("city_at_night.jpg");
+	  background-image: url("black-background.jpg");
 	}
 
 	#professionalism{
 	  background-image: url("blueprint.jpg");
+		filter: blur(5px) grayscale(70%);
+	}
+
+	.banner{
+		position: absolute;
+		top: 535px;
+		width: 100%;
+		height: 200px;
+	}
+
+	.banner h2{
+		position: relative;
+		top: 80px;
+		text-align: center;
+		width: 100%;
+		font-weight: bold;
 	}
 
 	.main-content{
@@ -195,11 +239,13 @@
 	  height: 1000px;
 	  position: absolute;
 		z-index: 0;
-		top: 850px;
-		background-image: url('background_intro.jpg');
+		top: 735px;
+		background-image: url('white-background.png');
+		background-repeat: none;
+		background-size: cover;
 	}
 
-	.introtable{
+	#introtable{
 		margin: auto;
 	}
 
@@ -210,11 +256,11 @@
 		margin: 40px;
 		border: solid lightblue 3px;
 		border-radius: 100%;
-		opacity: 0.4;
+		filter: grayscale(100%);
 	}
 
 	.profilepic:hover {
-		opacity: 1;
+		filter: grayscale(0%);;
 	}
 
 	.profilepic:hover ~ .member{
@@ -253,5 +299,37 @@
 	.description {
 		font: 20pt Verdana;
 		line-height: 150%;
+	}
+
+	.footer{
+		border-top: solid black 5px;
+		position: relative;
+		top: 1535px;
+		width: 100%;
+		height: 245px;
+		background-color: white;
+	}
+
+	.footer p{
+		color: black;
+		font-size: 13pt;
+		text-align: center;
+	}
+
+	#contact-info{
+		position: relative;
+		top: 20px;
+	}
+
+	#contact-table{
+		margin: auto;
+	}
+
+	#contact-table img{
+		width: 40px;
+		height: auto;
+		background-color: white;
+		margin: 30px 20px;
+		border: solid 3px black;
 	}
 }
