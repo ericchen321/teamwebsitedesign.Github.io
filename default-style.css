@@ -278,7 +278,7 @@
 		margin-bottom: 10px;
 	}
 
-	.intro-container img{
+	.intro-container .img{
 		width: 180px;
 		height: 180px;
 		float: left;
@@ -313,6 +313,22 @@
 		top: 20px;
 		line-height: 200%;
 		font-size: 1.2em;
+	}
+
+	/* Glyph, by Harry Roberts */
+	hr.style-eight-right, hr.style-eight-left {
+		padding: 0;
+		border: none;
+		border-top: medium double #333;
+		color: #333;
+		text-align: center;
+		width: 55%;
+	}
+	hr.style-eight-right{
+		margin-right: 15%;
+	}
+	hr.style-eight-left{
+		margin-left: 15%;
 	}
 
 	.footer{
